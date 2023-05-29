@@ -10,7 +10,7 @@ export function ProductsPage(){
      <div className='container'>
         <h1>IronStore</h1>
         <SearchBar />
-        <ProductTable />
+        <ProductTable products={products} setProducts={setProducts} />
      </div>
     );
 }

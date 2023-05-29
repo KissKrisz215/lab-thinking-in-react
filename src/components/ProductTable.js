@@ -1,6 +1,6 @@
 import { ProductRow } from "./ProductRow";
 
-export function ProductTable(){
+export function ProductTable({products, setProducts}){
     return(
      <div className="container mt-5">
          <table className="w-100">
@@ -11,7 +11,11 @@ export function ProductTable(){
                 </tr>
             </thead>
             <tbody>
-                <ProductRow />
+            {products.map((product) => {
+             return(
+                <ProductRow key={product.id}  product={product} />
+             );
+            })}
             </tbody>
          </table>
      </div>
